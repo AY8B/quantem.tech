@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -37,7 +37,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      padding: 1rem 0;
+      padding: 0.8rem 0;
       border-bottom: 1px solid #eef2f8;
     }
 
@@ -48,8 +48,20 @@
       flex-wrap: wrap;
     }
 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo svg {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
     .logo a {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       font-weight: 800;
       text-decoration: none;
       letter-spacing: -0.02em;
@@ -408,6 +420,7 @@
       .impact-card { padding: 2rem; }
       .impact-highlight { font-size: 1.3rem; }
       .partner-box { padding: 2rem; }
+      .logo svg { height: 32px; }
     }
   </style>
 </head>
@@ -416,6 +429,22 @@
 <header class="site-header">
   <div class="container header-container">
     <div class="logo">
+      <!-- Your custom SVG logo -->
+      <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#007CF0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <g transform="translate(145, 60)">
+          <path d="M70,120 A60,60 0 1,1 110,40" fill="none" stroke="url(#blueGrad)" stroke-width="12" stroke-linecap="round"/>
+          <path d="M45,60 H95 M70,60 V110" stroke="url(#blueGrad)" stroke-width="14" stroke-linecap="butt"/>
+          <circle cx="45" cy="85" r="5" fill="url(#blueGrad)" />
+          <path d="M45,85 L65,105" stroke="url(#blueGrad)" stroke-width="4" fill="none"/>
+          <path d="M30,120 L130,20 M130,20 L105,25 M130,20 L125,45" stroke="#00A3FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+      </svg>
       <a href="#">Quantem<span>Tech</span></a>
     </div>
     <nav class="main-nav">
@@ -548,8 +577,8 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>Quantem.tech</h3>
-        <p>Quantem.tech is a global leader in enterprise resource planning (ERP) and customer relationship management (CRM) solutions. We help businesses of all sizes optimize their operations, improve customer satisfaction, and drive growth.</p>
+        <h3>Quantem.Tech</h3>
+        <p>Quantem.Tech is a global leader in enterprise resource planning (ERP) and customer relationship management (CRM) solutions. We help businesses of all sizes optimize their operations, improve customer satisfaction, and drive growth.</p>
       </div>
       <div class="footer-expertise">
         <h4><i class="fas fa-globe"></i> Global Expertise</h4>
@@ -575,7 +604,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Quantem.tech. All rights reserved.</p>
+      <p>© 2026 Quantem.Tech. All rights reserved.</p>
     </div>
   </div>
 </footer>
