@@ -226,6 +226,79 @@
       box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
     }
 
+    /* Service Detail Cards */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 28px;
+      border: 1px solid #eef2f8;
+      transition: all 0.25s;
+      text-align: left;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: #1a5d9c;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: #1a5d9c;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: #0b2b5c;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .service-card ul li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      color: #4a627a;
+    }
+
+    .service-card ul li::before {
+      content: "✓";
+      color: #1a5d9c;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .service-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .service-features span {
+      background: #f0f5fa;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #0b2b5c;
+      text-align: center;
+    }
+
     /* Why Partner */
     .partner-box {
       text-align: center;
@@ -408,6 +481,39 @@
       font-size: 0.85rem;
     }
 
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #0b2b5c;
+      font-weight: 600;
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid #cfdfed;
+      border-radius: 60px;
+      padding: 0.75rem 1.2rem;
+      transition: all 0.2s ease;
+    }
+
+    .contact-item i {
+      color: #1a5d9c;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-2px);
+      border-color: #1a5d9c;
+      box-shadow: 0 8px 20px rgba(11,43,92,0.12);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.4rem; }
@@ -421,15 +527,16 @@
       .impact-highlight { font-size: 1.3rem; }
       .partner-box { padding: 2rem; }
       .logo svg { height: 32px; }
+      .service-grid { grid-template-columns: 1fr; }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-container">
     <div class="logo">
-      <!-- Your custom SVG logo -->
       <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -449,10 +556,10 @@
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="#">Solutions</a></li>
-        <li><a href="#">Platforms</a></li>
-        <li><a href="#">Impact</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#platforms">Platforms</a></li>
+        <li><a href="#cybersecurity">Cybersecurity</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <button class="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
@@ -466,8 +573,93 @@
       <h1>Precision in ERP & IT Consulting</h1>
       <p>Accelerate your digital transformation with our tailored enterprise solutions. Engineering precision into every workflow.</p>
       <div class="hero-buttons">
-        <a href="#" class="btn-primary">Get Started</a>
-        <a href="#" class="btn-secondary">View Solutions</a>
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#contact" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Comprehensive Services</h2>
+      <p class="section-sub">End-to-end enterprise solutions designed to optimize your operations, enhance security, and drive growth.</p>
+      
+      <div class="service-grid">
+        <!-- Quantem Accounting Services -->
+        <div class="service-card">
+          <i class="fas fa-calculator"></i>
+          <h3>Quantem Accounting Services</h3>
+          <p>Professional accounting solutions powered by ERPNext to streamline financial operations, ensure compliance, and provide real-time visibility into your business performance.</p>
+          <div class="service-features">
+            <span>ERPNext Accounting</span>
+            <span>Real-time Reporting</span>
+            <span>Compliance Management</span>
+            <span>Automated Invoicing</span>
+            <span>Tax Management</span>
+            <span>Audit Trails</span>
+          </div>
+        </div>
+
+        <!-- Quantem Logistics Systems -->
+        <div class="service-card">
+          <i class="fas fa-shipping-fast"></i>
+          <h3>Quantem Logistics Systems</h3>
+          <p>Advanced cargo management and real-time tracking solutions for logistics companies. Track shipments, manage fleets, and optimize supply chain operations with precision.</p>
+          <div class="service-features">
+            <span>Real-time Tracking</span>
+            <span>Fleet Management</span>
+            <span>Route Optimization</span>
+            <span>Warehouse Management</span>
+            <span>Carrier Integration</span>
+            <span>Proof of Delivery</span>
+          </div>
+        </div>
+
+        <!-- QuickBooks Integration -->
+        <div class="service-card">
+          <i class="fas fa-book"></i>
+          <h3>QuickBooks Integration</h3>
+          <p>Seamless QuickBooks integration for small to medium businesses. Automate bookkeeping, sync transactions, and gain deep insights into your financial health.</p>
+          <div class="service-features">
+            <span>Automated Bookkeeping</span>
+            <span>Bank Reconciliation</span>
+            <span>Expense Tracking</span>
+            <span>Multi-currency Support</span>
+            <span>Payroll Management</span>
+            <span>Financial Reporting</span>
+          </div>
+        </div>
+
+        <!-- ERPNext Comprehensive System -->
+        <div class="service-card">
+          <i class="fas fa-cubes"></i>
+          <h3>ERPNext Comprehensive System</h3>
+          <p>Full-scale ERPNext implementation covering all business operations including accounting, HR, manufacturing, sales, purchasing, and project management.</p>
+          <div class="service-features">
+            <span>Accounting & Finance</span>
+            <span>HR & Payroll</span>
+            <span>Manufacturing</span>
+            <span>Sales & CRM</span>
+            <span>Inventory Management</span>
+            <span>Project Management</span>
+          </div>
+        </div>
+
+        <!-- Cybersecurity Services -->
+        <div class="service-card">
+          <i class="fas fa-shield-halved"></i>
+          <h3>Cybersecurity Solutions</h3>
+          <p>Comprehensive security scanning and protection for private and public infrastructure. Secure government spaces, corporate networks, and cloud environments with enterprise-grade security.</p>
+          <div class="service-features">
+            <span>Vulnerability Scanning</span>
+            <span>Penetration Testing</span>
+            <span>Network Security</span>
+            <span>Cloud Security</span>
+            <span>Government Compliance</span>
+            <span>24/7 Monitoring</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -501,17 +693,61 @@
     </div>
   </section>
 
+  <!-- Cybersecurity Detail -->
+  <section class="section" id="cybersecurity">
+    <div class="container">
+      <h2 class="section-title">Cybersecurity Services</h2>
+      <p class="section-sub">Protect your critical infrastructure with our comprehensive security solutions for both private and public sectors.</p>
+      
+      <div class="service-grid">
+        <div class="service-card">
+          <i class="fas fa-building-columns"></i>
+          <h3>Government & Public Sector</h3>
+          <p>Specialized security solutions for government agencies and public institutions. Ensure compliance with regulatory standards and protect sensitive citizen data.</p>
+          <ul>
+            <li>Compliance with government security standards</li>
+            <li>Critical infrastructure protection</li>
+            <li>Secure communication channels</li>
+            <li>Advanced threat detection</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-network-wired"></i>
+          <h3>Private Sector Security</h3>
+          <p>Enterprise-grade security for businesses of all sizes. Protect your intellectual property, customer data, and business operations.</p>
+          <ul>
+            <li>Network security assessment</li>
+            <li>Cloud security hardening</li>
+            <li>Incident response planning</li>
+            <li>Employee security training</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-eye"></i>
+          <h3>Security Scanning & Monitoring</h3>
+          <p>Continuous monitoring and scanning to identify vulnerabilities before they can be exploited.</p>
+          <ul>
+            <li>Automated vulnerability scanning</li>
+            <li>Real-time threat monitoring</li>
+            <li>Security compliance audits</li>
+            <li>Penetration testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Why Partner -->
   <section class="section">
     <div class="container partner-box">
-      <h2 class="section-title" style="font-size: 1.9rem;">Why Partner With Quantum Tech?</h2>
+      <h2 class="section-title" style="font-size: 1.9rem;">Why Partner With Quantem Tech?</h2>
       <p style="max-width: 700px; margin: 0 auto;">We don't just implement software; we engineer competitive advantages for the world's most complex organizations.</p>
-      <a href="#" class="partner-link">Our Methodology →</a>
+      <a href="#contact" class="partner-link">Our Methodology →</a>
     </div>
   </section>
 
   <!-- Masters of the Modern Enterprise Ecosystem (Platforms) -->
-  <section class="section">
+  <section class="section" id="platforms">
     <div class="container">
       <h2 class="section-title">Masters of the Modern Enterprise Ecosystem</h2>
       <p class="section-sub">We specialize in high-stakes ERP migrations and implementations across the big three platforms. Our certified architects ensure your data remains a strategic asset, not a liability.</p>
@@ -554,21 +790,17 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="section cta-section">
+  <section class="section cta-section" id="contact">
     <div class="container cta-container">
       <h2 style="font-size: 1.9rem;">Ready to engineer your future?</h2>
       <p>Connect with our senior consultants for a technical audit of your existing IT infrastructure.</p>
-      <form class="cta-form">
-        <input type="email" placeholder="WORK EMAIL" required>
-        <select required>
-          <option value="" disabled selected>SERVICE OF INTEREST</option>
-          <option>ERP Consulting</option>
-          <option>Digital Transformation</option>
-          <option>Business Analytics</option>
-          <option>Managed Services</option>
-        </select>
-        <button type="submit">Submit Request</button>
-      </form>
+      <div class="contact-details" aria-label="Contact details">
+        <a class="contact-item" href="mailto:quantem.technology@gmail.com"><i class="fas fa-envelope"></i> quantem.technology@gmail.com</a>
+        <a class="contact-item" href="tel:+252634223030,+252634357077"><i class="fas fa-phone"></i> +252634223030,+252634357077</a>
+      </div>
+      <div class="cta-form">
+        <a class="btn-primary" href="mailto:quantem.technology@gmail.com?subject=Quantem.Tech%20Consultation%20Request" style="border-radius:60px; padding:1rem 2rem;">Email Consultation Request</a>
+      </div>
     </div>
   </section>
 </main>
@@ -597,9 +829,15 @@
       <div class="footer-links">
         <h4>Navigate</h4>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Legal</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#platforms">Platforms</a></li>
+          <li><a href="#cybersecurity">Cybersecurity</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <h4 style="margin-top: 1.25rem;">Contact</h4>
+        <ul>
+          <li><a href="mailto:quantem.technology@gmail.com">quantem.technology@gmail.com</a></li>
+          <li><a href="tel:+252634223030,+252634357077">+252634223030,+252634357077</a></li>
         </ul>
       </div>
     </div>
